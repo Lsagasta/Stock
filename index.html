@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Control de Stock</title>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+<link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+    <div class="container py-2 bg-info">
+        <h3>Primera entrega del Proyecto Final</h3>
+        <h1 class="mb-5">App para la gestión de stock</h1>
+
+        <div class="row">
+          
+        <div class="card col-7 mx-2 p-0">
+          <div class="card-header">
+               Ingrese Nuevo Producto
+          </div>
+  
+          <div class="card-body">
+  
+          <form>
+              <input type="text" id="producto" placeholder=" Nombre del Producto. 'Teclado'" class="form-control my-2">
+              <input type="text" id="marca" placeholder=" Marca. 'Redragon'" class="form-control my-2">
+              <input type="text" id="modelo" placeholder=" Modelo 'Kumara-K552'" class="form-control my-2">
+              <input type="text" id="color" placeholder=" Color 'Negro'" class="form-control my-2">
+              <input type="text" id="precio" placeholder=" Precio '4000'" class="form-control my-2">
+              <input type="text" id="cantidad" placeholder=" Cantidad '20'" class="form-control my-2">
+              <button id="boton_captura" class="btn btn-success" type="reset" onclick="capturar();"> Agregar Producto </button>
+  
+          </form>
+          
+          </div>
+          </div>
+
+
+          <div class="col-1"></div>
+        <div class="card col-3 mx-2 p-0">
+          <div class="card-header text-center text-bg-success">
+               STOCK
+          </div>
+  
+          <div class="card-body text-bg-secondary">
+
+            <div class="card text-center mt-3 ">
+              <div class="card-header text-bg-info">Cantidad</div>
+              <div class="card-body text-bg-light" id="StockCantidad" >0</div>
+            </div>
+
+            <div class="card mt-3 text-center">
+              <div class="card-header text-bg-warning">Valor</div>
+              <div class="card-body text-bg-light" id="StockValor">0</div>
+            </div>
+
+            
+            
+
+
+          </div>
+          </div>
+        </div>
+        
+
+       
+
+        <div class="card col-12 mt-3">
+            <div class="card-header">
+                 Tabla de Productos
+            </div>
+    
+            <div class="card-body">
+    
+                <table class="table" id="tabla">
+                    <thead class="table-info">
+                      <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Producto</th>
+                        <th scope="col">Marca</th>
+                        <th scope="col">Modelo</th>
+                        <th scope="col">Color</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Cantidad en Stock</th>
+                      </tr>
+                    </thead>
+
+                    
+                      
+                    
+
+                  </table>
+            
+            </div>
+            </div>
+
+
+    </div>
+
+    
+
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script src="./js/script.js"></script>
+</body>
+</html>
